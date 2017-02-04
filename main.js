@@ -15,19 +15,6 @@ var navwrap = document.querySelector(".navwrap");
 heading.style.display = "block";
 scroll.style.display = "block";
 
-//changing background of nav on scrolling
-/*addEventListener("scroll",function(){
-	if(pageYOffset >= innerHeight )
-	{
-		addEventListener("scroll",function(){
-			if(pageYOffset < innerHeight)
-			{
-				nav.style.backgroundColor = "";
-			}
-		},false);
-		nav.style.backgroundColor = "#4274f4";
-	}
-},false);*/
 
 //scrolling
 scroll.addEventListener("click",function(){
@@ -74,14 +61,14 @@ first.addEventListener("click",function(){
 		navwrap.style.display = "block";
 		var a = setInterval(function(){
 			tmp += 0.5;
-			tmp2 += 0.03;
+			tmp2 += 0.025;
 			nav2.style.opacity = tmp2;
 			nav2.style.width = tmp + "%";
 			if(nav2.style.width == "20%")
 			{
 				clearInterval(a);
 			}
-		},9);
+		},8);
 		window.setTimeout(function(){
 			navtxt.style.fontSize = "150%";
 			first.style.display = "none";
@@ -96,43 +83,58 @@ second.addEventListener("click",function(){
 		navwrap.style.display = "none"; 
 		var a = setInterval(function(){
 			tmp -= 0.5;
-			tmp2 -= 0.03;
+			tmp2 -= 0.025;
 			nav2.style.width = tmp + "%";
 			nav2.style.opacity = tmp2;
 			if(nav2.style.width == "0%")
 			{
 				clearInterval(a);
 			}
-		},9);
+		},8);
 		window.setTimeout(function(){
 			second.style.display ="none";
 			first.style.display = "block";
 		},250);
 	},false);
-var nava = document.querySelector("nav2 li a");
-nava.addEventListener("mouseover",function(e){
-	 var tmp = "15%";
-	 nava.style.color = "#3d2f1f";
-	 var a = setInterval(function(){
-	 	tmp+=0.2;
-	 	nava.style.padding = tmp + "%";
-	 	if(nava.style.padding == "17%")
-	 	{
-	 		clearInterval(a);
-	 	}
-	 },10);
-	 nava.addEventListener("mouseover",function(e){
-	 var tmp = "15%";
-	 nava.style.color = "#3d2f1f";
-	 var a = setInterval(function(){
-	 	tmp+=0.2;
-	 	nava.style.padding = tmp + "%";
-	 	if(nava.style.padding == "17%")
-	 	{
-	 		clearInterval(a);
-	 	}
-	 },10);
-},false);
-},false);
 
-}
+
+//login
+var login = document.querySelector(".buttonl ");
+var loginwrap = document.querySelector(".wrapper-login");
+var box = document.querySelector(".wrapper-login #formbox");
+var cross = document.querySelector(".wrapper-login img");
+login.addEventListener("click",function(){
+		var tmp = 0;
+		var tmp2 = 50;
+		var a = setInterval(function(){
+			tmp ++;
+			tmp2 -= 0.5;
+			cross.style.display="block";
+			loginwrap.style.top = tmp2 + "%";
+			loginwrap.style.height = tmp + "%";
+			if(loginwrap.style.height == "100%")
+			{
+				clearInterval(a);
+			}
+		},4);
+		window.setTimeout(function(){
+			box.style.display = "block";
+		},400);
+		cross.addEventListener("click",function(){
+		var tmp = 100;
+		var tmp2 = 0;
+		var a = setInterval(function(){
+			tmp--;
+			tmp2 += 0.5;
+			cross.style.display = "none";
+			loginwrap.style.top = tmp2 + "%";
+			loginwrap.style.height = tmp + "%";
+			if(loginwrap.style.height == "0%")
+			{
+				clearInterval(a);
+			}
+		},4);
+			box.style.display = "none";
+		})	
+	},false);
+}	
