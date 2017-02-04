@@ -9,6 +9,18 @@ html, body {
 body{
 	line-height: 1.2em;
 }
+.navwrap{
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	height: 100vh;
+	width: 100vw;
+	display: none;
+	background-color: #000000;
+	background-size:100% 100%;
+	opacity: 0.5; 
+	z-index: 5; 
+}
 .wrapper{
 	background:url("Images/main_bg.jpg");
 	background-size:100vw 100vh;
@@ -128,16 +140,16 @@ body{
 /*---Header----*/
 .header-container{
 	background-color: #000000;
-	opacity: 0.5;
+	opacity: 0.4;
 	position: absolute;
-	left: 5%;
-	top:10%;
+	left:0%;
+	top: 0%;
 	background-size: 100% 100%;
-	width: 90vw;
-	height: 70vh;
+	width: 100vw;
+	height: 100vh;
 	margin: 0%;
-	margin-right:5%;
-	margin-bottom: 5%; 
+	margin-right:3%;
+	margin-bottom:4%; 
 	padding: 0%;
 	border:none;
 }
@@ -153,7 +165,7 @@ body{
 .header-container .heading{
 	position: absolute;
 	display: none;
-	top:55%;
+	top:50%;
 	width: 100%;
 	height: 40%;
 	font-style: italic;
@@ -163,26 +175,63 @@ body{
 	animation: heading 3s linear 0s infinite alternate both;
 }
 
-.button{
-	background-color: #FFFFFF;
-	position: fixed;
-	top: 1%;
-	right: 1%;
+.buttonl{
+	background-color: #3d2f1f;
+	position: absolute;
+	top: 2%;
+	right: 2%;
 	width: 10%;
-	height: 5%;
+	height: 6%;
 	border-radius:8px;
 	display: flex;
 	z-index: 2;
+	transition: background-color 0.8s ease-in;
 }
-.button .login{
+.buttonl:hover{
+	background-color:#FFFFFF;
+}
+
+.buttonl:hover .login a{
+	color: #3d2f1f;
+}
+.buttonl .login{
 	margin:auto;
 }
 
-.button .login a{
+.buttonl .login a{
 	font-size:120%;
-	color:#4274f4;
+	color:#FFFFFF;
 	text-decoration: none;
 }
+.buttons{
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 65%;
+	right: 52%;
+	width: 12%;
+	height: 7%;
+	border-radius:8px;
+	display: flex;
+	z-index: 2;
+	transition: background-color 0.8s ease-in;
+}
+.buttons:hover{
+	background-color:#3d2f1f;
+}
+
+.buttons:hover .signup a{
+	color: #FFFFFF;
+}
+.buttons .signup{
+	margin:auto;
+}
+
+.buttons .signup a{
+	font-size:120%;
+	color:#3d2f1f;
+	text-decoration: none;
+}
+
 /*.logo{
 	position: absolute;
 	left:1%;
@@ -217,7 +266,7 @@ body{
 }
 
 /*---NAVIGATION----*/
-.nav{
+/*.nav{
 	position: fixed;
 	display: block;
 	top:0%;
@@ -227,7 +276,7 @@ body{
 	z-index: 2;
 	background-size:100% 100%; 
 	opacity: 0.8;
-    /*background-color: #4274f4;*/
+    /*background-color: #4274f4;
 }
 
 .nav ul
@@ -267,17 +316,17 @@ body{
 }
  .nav li a.active{
  	font-weight: bolder;
- }
+ }*/
 .nav2{
+	opacity: 0;
 	position: fixed;
 	display: block;
 	top:0%;
 	left: 0%;
-	height: 80%;
+	height: 100%;
 	width:0%;
 	z-index: 200;
-    box-shadow: 4px 0px 0px #d4d6d8;
-    background-color: #4274f4;
+    background-color: #FFFFFF;
     background-size: 100% 100%;
 }
 .nav2 ul{
@@ -293,7 +342,6 @@ body{
 }
 .nav2 li{
 	width: 100%;
-	text-align:center;
 	margin-bottom:2%;
 	margin-top:2%;
 	padding: 5%;
@@ -301,18 +349,22 @@ body{
 }
 .nav2 li a{
 	font-family : 'Slabo 27px';
-	
 	padding: 15%;
 	padding-top: 8%;
 	padding-bottom: 1%;
-	color: #FFFFFF;
+	color: #8B7964;
 	text-decoration: none;
+	transition:color 0.2s,padding 0.2s ease-in;
+}
+.nav2 li a:hover{
+	color: #3d2f1f;
+	padding:17%;
 }
 
 .mob_nav{
 	z-index: 10;
-	width: 7%;
-	height: 10%;
+	width: 3%;
+	height: 4%;
 }
 .mob_nav img{
 	width: 100%;
@@ -329,6 +381,7 @@ body{
 	display: none;
 	position: fixed;
 	top:1%;
+	z-index: 10;
 	left:21%;
 }
 /*---CONTENT----*/
@@ -361,20 +414,17 @@ body{
 .social{
 	position: fixed;
 	top:92%;
-	right: 0.5%;
+	right: 0.3%;
 	display: flex;
-	width :50px;
-	height: 50px;
+	width :100px;
+	height: 100px;
 	z-index:5;
 }
 .social img{
-	border-radius: 50%;
-	border-style: solid;
-	border-color: #FFFFFF;
-	border-width: 1px;
+
 	padding: 2%;
-	width: 100%;
-	height: 100%;
+	width: 40px;
+	height: 40px;
 }
 .social a{
 	padding: 5%;
