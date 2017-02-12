@@ -403,6 +403,28 @@ input[type=text]:focus,input[type=password]:focus{
 	width:4%;
 	border-radius: 50%;
 }*/
+<<<<<<< HEAD
+=======
+.scroll{
+	position: absolute;
+	top: 80%;
+	width: 100%;
+	display: flex;
+
+}
+.scroll img{
+	margin:auto;
+	width: 8%;
+	height: 8%;
+	animation: scroll 1s linear 0s infinite alternate both;
+	display: none;
+}
+.scroll-pos{
+	position: absolute;
+	top:100%;
+	width: 100%;
+}
+>>>>>>> ef79eca3aec3fc20680fe2b6775d0243aa58ee7d
 
 .nav2{
 	opacity: 0;
