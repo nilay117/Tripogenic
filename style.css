@@ -31,8 +31,18 @@ body{
 	height: 100vh;
 	background-repeat: no-repeat; 
 }
-.parallax-window {
-    min-height: 700px;
+.parallax-window.first{
+    min-height: 700px;	
+    background: transparent;
+}
+
+.parallax-window.second{
+    min-height: 400px;
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top:175%;
+    z-index: 130;
     background: transparent;
 }
 /*---keyframe----*/
@@ -145,7 +155,7 @@ body{
 	position: fixed;
 	background-color: #FFFFFF;
 	opacity: 0.4;
-	z-index:100;
+	z-index:140;
 }
 .frame#left{
 	width: 2.5%;
@@ -222,13 +232,13 @@ body{
 #login{
 	position: fixed;
 	right: 3%;
-	padding: 0.2%;
+	padding: 0%;
 	padding-right: 0.7%;
 	padding-left: 0.7%;
-	top:0.2%;
+	top:0.9%;
 	font-weight: bold;
 	font-size: 130%;
-	z-index: 110;
+	z-index: 150;
 }
 #login a{
 	color: #ffffff;
@@ -236,7 +246,7 @@ body{
 }
 
 .wrapper-login{
-	z-index: 130;
+	z-index: 150;
 	position: fixed;
 	top:50%;
 	left: 0%;
@@ -404,8 +414,7 @@ input[type=text]:focus,input[type=password]:focus{
 	width:4%;
 	border-radius: 50%;
 }*/
-<<<<<<< HEAD
-=======
+
 .scroll{
 	position: absolute;
 	top: 80%;
@@ -433,7 +442,7 @@ input[type=text]:focus,input[type=password]:focus{
 	left: -34%;
 	width: 30%;
 	height: 87%;
-	z-index: 90;
+	z-index: 140;
     background-color: #FFFFFF;
     background-size: 100% 100%;
 }
@@ -474,7 +483,7 @@ input[type=text]:focus,input[type=password]:focus{
 	position: fixed;
 	top:1%;
 	left: 1%;
-	z-index: 120;
+	z-index: 140;
 }
 .hamburger .element{
 	width: 25px;
@@ -521,12 +530,12 @@ input[type=text]:focus,input[type=password]:focus{
 	width: 30px;
 	height: 30px;
 	left: 0.5%;
-	z-index: 120;
+	z-index: 140;
 	transform: rotate(45deg);
 }
 .cross .element{
 	width: 25px;
-	z-index: 120;
+	z-index: 140;
 	background-color: #FFFFFF;
 	height: 3px;
 	position: relative;
@@ -544,19 +553,19 @@ input[type=text]:focus,input[type=password]:focus{
 	left: 4%;
 }
 /*---CONTENT----*/
-.main_content{
+.about{
 	padding: 2%;
 	padding-top:3%;	  
 	background-color: #ffffff;
 	position: absolute;
 	top:110%;
-	left: 0%;
+	left: 2.5%;
 	height: 40%;
-	width: 100%;
+	width: 95%;
 	margin-left:0%;
 	color: black;
 }
-.main_content .heading{
+.about .heading{
 	font-size:600%;
 	color: #484B5F;
 	font-family: 'Lobster',cursive;
@@ -565,7 +574,7 @@ input[type=text]:focus,input[type=password]:focus{
 	top:1%;
 	left: -1%;
 }
-.main_content p{
+.about p{
 	font-size:154.999%;
 	line-height: 1.4em;
 	position: relative;
@@ -679,7 +688,7 @@ input[type=text]:focus,input[type=password]:focus{
 		font-size: 8px;
 		line-height: 1.6em;
 	}
-	.main_content p{
+	.about p{
 		font-size: 200%;
 	}
 	.header{
@@ -692,7 +701,7 @@ input[type=text]:focus,input[type=password]:focus{
 		font-size: 7.5px;
 		line-height: 1.6em;
 	}
-	.main_content p{
+	.about p{
 		font-size: 240%;
 	}
 	.header{
@@ -748,5 +757,126 @@ input[type=text]:focus,input[type=password]:focus{
 	transition: height 0.5s;
 }
 #login:hover .left,#login:hover .right{
+	height: 100%;
+}
+.map-text{
+	text-align: center;
+	color: rgb(61, 47, 31);
+	position: absolute;
+	top:0%;
+	display: flex;
+	height: 100%;
+	left:3%; 
+	line-height: 2em;
+	font-size: 300%;
+	font-family: 'Lobster';
+}
+.map-wrap{
+	background-color: #ffffff;
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: 130;
+}
+.offers{
+	position: absolute;
+	top: 250%;
+	left: 0%;
+	z-index: 130;
+	width: 100%;
+}
+.offers .heading{
+	font-family:'Roboto';
+	font-weight: bold;
+	color: #484B5F;
+	text-align:center; 
+	font-size: 500%;
+}
+.offers p{
+	position: relative;
+	line-height: 1.5em;
+	text-align: center;
+	font-size: 350%;
+	color: #252630;
+	font-family: 'Roboto';
+}
+.offers .button1{
+	font-size: 230%;
+	color: #484B5F;
+	cursor: pointer;
+	position: absolute;
+	left: 32%;
+	top:85%;
+	font-weight: bold;
+	width: 15%;
+	padding:1%; 
+}
+.offers .button2{
+	font-size: 230%;
+	cursor: pointer;
+	color: #484B5F;
+	position: absolute;
+	left: 52%;
+	top:85%;
+	font-weight: bold;
+	width: 13%;
+	padding:1%; 
+}
+.underline{
+	background-color: #484B5F;
+}
+.underline .bottom{
+	position: absolute;
+	top:100%;
+	left:0%;
+	width: 0%;
+	height: 3px;
+	transition: width 0.25s ;
+}
+.underline .right{
+	position: absolute;
+	top:100%;
+	right:0%;
+	width: 3px;
+	height: 0%;
+	transition: height 0.25s linear 0.25s,top 0.25s linear 0.25s;
+}
+.underline .top{
+	position: absolute;
+	top:0%;
+	right:0%;
+	width: 0%;
+	height: 3px;
+	transition: width 0.25s linear 0.5s;
+}
+.underline .left{
+	position: absolute;
+	top:0%;
+	left:0%;
+	height: 0%;
+	width:3px;
+	transition: height 0.25s linear 0.75s;
+}
+.offers .button1:hover .underline .bottom,.offers .button1:hover .underline .top{
+	width: 100%;
+}
+.offers .button1:hover .underline .left{
+	height: 100%;
+}
+.offers .button1:hover .underline .right{
+	top:0%;
+	height: 100%;
+}
+.offers .button2:hover .underline .bottom,.offers .button2:hover .underline .top{
+	width: 100%;
+}
+.offers .button2:hover .underline .left{
+	height: 100%;
+}
+.offers .button2:hover .underline .right{
+	top:0%;
 	height: 100%;
 }

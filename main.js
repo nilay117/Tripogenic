@@ -18,11 +18,14 @@ var navwrap = document.querySelector(".navwrap");
 
 
 //changing qoute
+$(".header-container .heading").fadeIn(1000).delay(2000);
+$(".header-container .heading").fadeOut(1000).delay(500);
 setInterval(function(){
-	$(".header-container .heading").fadeIn(1000).delay(2000);;
-	$(".header-container .heading").fadeOut(1000).delay(500);
 	heading.innerHTML = ar[index];
 	index++;
+	$(".header-container .heading").fadeIn(1000).delay(2000);
+	$(".header-container .heading").fadeOut(1000).delay(500);
+	
 	if(index == 3)
 	{
 		index = 0;
@@ -138,7 +141,6 @@ $(window).scroll(function(){
 	}
 })
 
-//animated heading
-
+//button animation
 
 }
