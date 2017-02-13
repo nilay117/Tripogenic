@@ -31,7 +31,10 @@ body{
 	height: 100vh;
 	background-repeat: no-repeat; 
 }
-.wraper
+.parallax-window {
+    min-height: 700px;
+    background: transparent;
+}
 /*---keyframe----*/
 @-webkit-keyframes heading{
 	0%{
@@ -176,21 +179,19 @@ body{
 }
 .header-container{
 	position: absolute;
-	left:3%;
-	top: 5%;
+	left:0%;
+	top: 0%;
 	background-size: 100% 100%;
-	width: 94vw;
-	height: 90vh;
+	width: 100vw;
+	height: 100vh;
 	margin: 0%;
-	margin-right:3%;
-	margin-bottom:4%; 
 	padding: 0%;
 	border:none;
 }
 .header{
-	font-size: 600%;
+	font-size: 620%;
 	font-family: 'Sansita';
-	color:#FFFFFF;
+	color:#eaf1fc;
 	position: absolute;
 	text-align: center;
 	display: block;
@@ -200,14 +201,14 @@ body{
 .header-container .heading{
 	position: absolute;
 	display: none;
-	top:50%;
+	top:45%;
 	width: 100%;
 	height: 40%;
 	font-style: italic;
 	text-align: center;
 	color: #FFFFFF;
 	font-size:200%;
-	animation: heading 3s linear 0s infinite alternate both;
+	/*animation: heading 3s linear 2s infinite alternate both;*/
 }
 @keyframes u{
 	0%{
@@ -224,7 +225,7 @@ body{
 	padding: 0.2%;
 	padding-right: 0.7%;
 	padding-left: 0.7%;
-	top:1%;
+	top:0.2%;
 	font-weight: bold;
 	font-size: 130%;
 	z-index: 110;
@@ -424,8 +425,6 @@ input[type=text]:focus,input[type=password]:focus{
 	top:100%;
 	width: 100%;
 }
->>>>>>> ef79eca3aec3fc20680fe2b6775d0243aa58ee7d
-
 .nav2{
 	opacity: 0;
 	position: fixed;
@@ -527,6 +526,7 @@ input[type=text]:focus,input[type=password]:focus{
 }
 .cross .element{
 	width: 25px;
+	z-index: 120;
 	background-color: #FFFFFF;
 	height: 3px;
 	position: relative;
@@ -551,23 +551,30 @@ input[type=text]:focus,input[type=password]:focus{
 	position: absolute;
 	top:110%;
 	left: 0%;
-	height: auto;
+	height: 40%;
 	width: 100%;
 	margin-left:0%;
 	color: black;
 }
 .main_content .heading{
-	font-size:400%;
-	color: #FF8F2F;
-	font-family: 'Kumar One',cursive;
+	font-size:600%;
+	color: #484B5F;
+	font-family: 'Lobster',cursive;
 	position: relative;
 	text-align: center;
 	top:1%;
+	left: -1%;
 }
 .main_content p{
-	font-size:150%;
+	font-size:154.999%;
+	line-height: 1.4em;
 	position: relative;
-	margin-top: 5%;
+	margin-top: 1%;
+	width: 90%;
+	font-family: 'Roboto';
+	color: #252630;
+	text-align: justify;
+	margin-left: 3%;
 	top:20%;
 }
 
@@ -594,6 +601,7 @@ input[type=text]:focus,input[type=password]:focus{
 .footer{
 	position: absolute;
 	top:310%;
+	z-index: 120;
 	left: 0%;	
 	margin: 0px;
 	box-sizing: border-box;

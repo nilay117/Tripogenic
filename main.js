@@ -12,20 +12,22 @@ var scrollPos = document.querySelector(".scroll-pos");
 var navwrap = document.querySelector(".navwrap");
 
 //loading elements
-heading.style.display = "block";
+
 
 //scrolling
 
 
 //changing qoute
 setInterval(function(){
+	$(".header-container .heading").fadeIn(1000).delay(2000);;
+	$(".header-container .heading").fadeOut(1000).delay(500);
 	heading.innerHTML = ar[index];
 	index++;
 	if(index == 3)
 	{
 		index = 0;
 	}
-},6000);
+},4500);
 
  //hover on social icons
 fb.addEventListener("mouseover",function(){
@@ -120,18 +122,19 @@ login.addEventListener("click",function(){
 	},false);
 //frame change on scroll
 $(window).scroll(function(){
-	console.log(document.body.scrollTop);
 	if(document.body.scrollTop >= innerHeight){
 		$(".frame").css({opacity:"1"});
 		$(".hamburger .element").css({backgroundColor:"#3d2f1f"});
 		$(".hamtext").css({color:"#3d2f1f"});
 		$("#login a").css({color:"#3d2f1f"});
+		$(".cross .element").css({backgroundColor:"#3d2f1f"});
 		}
 	if(document.body.scrollTop < innerHeight){
 		$(".frame").css({opacity:"0.4"});
 		$(".hamburger .element").css({backgroundColor:"#ffffff"});
 		$(".hamtext").css({color:"#ffffff"});
 		$("#login a").css({color:"#ffffff"});
+		$(".cross .element").css({backgroundColor:"#ffffff"});
 	}
 })
 
