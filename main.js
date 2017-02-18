@@ -1,5 +1,5 @@
 window.onload =function(){
-
+new WOW().init();
 //variables
 var nav = document.querySelector(".nav");
 var fb =document.querySelector("#fb");
@@ -125,12 +125,14 @@ login.addEventListener("click",function(){
 	},false);
 //frame change on scroll
 $(window).scroll(function(){
+	console.log(innerHeight);
+	console.log(document.body.scrollTop);
 	if(document.body.scrollTop >= innerHeight){
 		$(".frame").css({opacity:"1"});
-		$(".hamburger .element").css({backgroundColor:"#3d2f1f"});
-		$(".hamtext").css({color:"#3d2f1f"});
-		$("#login a").css({color:"#3d2f1f"});
-		$(".cross .element").css({backgroundColor:"#3d2f1f"});
+		$(".hamburger .element").css({backgroundColor:"#252630"});
+		$(".hamtext").css({color:"#252630"});
+		$("#login a").css({color:"#252630"});
+		$(".cross .element").css({backgroundColor:"#252630"});
 		}
 	if(document.body.scrollTop < innerHeight){
 		$(".frame").css({opacity:"0.4"});
@@ -141,6 +143,25 @@ $(window).scroll(function(){
 	}
 })
 
-//button animation
-
+//itenary page
+	$('.offers .button1').click(function(){
+		$('.itenary').css("display","flex");
+		$('body').css("overflow","hidden");
+	});
 }
+
+//cities scroll efect
+$(window).scroll(function(){
+	if(document.body.scrollTop >= 2*(innerHeight)){
+		$('.jaipur').slideDown('100');
+		setTimeout(function(){
+			$(".delhi").slideDown('100')},100);
+		setTimeout(function(){
+			$(".agra").slideDown('100')},200);
+	}
+	else{
+		$('.jaipur').hide();
+		$('.delhi').hide();
+		$('.agra').hide();
+	}
+})

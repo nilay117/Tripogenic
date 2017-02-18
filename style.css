@@ -45,6 +45,15 @@ body{
     z-index: 130;
     background: transparent;
 }
+.parallax-window.third{
+	min-height: 400px;
+	position: absolute;
+	top: 430%;
+	width: 100%;
+	left: 0%;
+	z-index: 130;
+	background: transparent;
+}
 /*---keyframe----*/
 @-webkit-keyframes heading{
 	0%{
@@ -385,7 +394,7 @@ input[type=text]:focus,input[type=password]:focus{
 	transition: background-color 0.8s ease-in;
 }
 .buttons:hover{
-	background-color:#3d2f1f;
+	background-color:#484b5f;
 }
 
 .buttons:hover .signup a{
@@ -397,13 +406,13 @@ input[type=text]:focus,input[type=password]:focus{
 
 .buttons .signup a{
 	font-size:120%;
-	color:#3d2f1f;
+	color:#484b5f;
 	text-decoration: none;
 }
 
 /*.logo{
 	position: absolute;
-	left:1%;
+	lefft:1%;
 	top:1%;
 	z-index: 2;
 }
@@ -559,9 +568,9 @@ input[type=text]:focus,input[type=password]:focus{
 	background-color: #ffffff;
 	position: absolute;
 	top:110%;
-	left: 2.5%;
+	left: 0%;
 	height: 40%;
-	width: 95%;
+	width: 100%;
 	margin-left:0%;
 	color: black;
 }
@@ -595,7 +604,7 @@ input[type=text]:focus,input[type=password]:focus{
 	display: flex;
 	width :100px;
 	height: 100px;
-	z-index:110;
+	z-index:200;
 }
 .social img{
 
@@ -609,15 +618,15 @@ input[type=text]:focus,input[type=password]:focus{
 }
 .footer{
 	position: absolute;
-	top:310%;
-	z-index: 120;
+	top:500%;
+	z-index: 150;
 	left: 0%;	
 	margin: 0px;
 	box-sizing: border-box;
 	color: #ffffff;
 	background-color: #474849;
 	width: 100vw;
-	height: 8%;
+	height: 15%;
 }
 .footer p{
 	position: absolute;
@@ -724,7 +733,7 @@ input[type=text]:focus,input[type=password]:focus{
 }
 
 .top{
-	background-color: #3d2f1f;
+	background-color: #484b5f;
 	height: 3px;
 	width: 0%;
 	position: absolute;
@@ -737,7 +746,7 @@ input[type=text]:focus,input[type=password]:focus{
 	width: 100%;
 }
 .left{
-	background-color: #3d2f1f;
+	background-color: #484b5f;
 	height: 0%;
 	width: 3px;
 	position: absolute;
@@ -747,7 +756,7 @@ input[type=text]:focus,input[type=password]:focus{
 	transition: height 0.5s;
 }
 .right{
-	background-color: #3d2f1f;
+	background-color: #484b5f;
 	height: 0%;
 	width: 3px;
 	position: absolute;
@@ -800,6 +809,7 @@ input[type=text]:focus,input[type=password]:focus{
 	line-height: 1.5em;
 	text-align: center;
 	font-size: 350%;
+	margin-bottom: 0%;
 	color: #252630;
 	font-family: 'Roboto';
 }
@@ -809,7 +819,7 @@ input[type=text]:focus,input[type=password]:focus{
 	cursor: pointer;
 	position: absolute;
 	left: 32%;
-	top:85%;
+	top:115%;
 	font-weight: bold;
 	width: 15%;
 	padding:1%; 
@@ -820,7 +830,7 @@ input[type=text]:focus,input[type=password]:focus{
 	color: #484B5F;
 	position: absolute;
 	left: 52%;
-	top:85%;
+	top:115%;
 	font-weight: bold;
 	width: 13%;
 	padding:1%; 
@@ -834,7 +844,7 @@ input[type=text]:focus,input[type=password]:focus{
 	left:0%;
 	width: 0%;
 	height: 3px;
-	transition: width 0.25s ;
+	transition: width 0.125s ;
 }
 .underline .right{
 	position: absolute;
@@ -842,7 +852,7 @@ input[type=text]:focus,input[type=password]:focus{
 	right:0%;
 	width: 3px;
 	height: 0%;
-	transition: height 0.25s linear 0.25s,top 0.25s linear 0.25s;
+	transition: height 0.125s linear 0.125s,top 0.125s linear 0.125s;
 }
 .underline .top{
 	position: absolute;
@@ -850,7 +860,7 @@ input[type=text]:focus,input[type=password]:focus{
 	right:0%;
 	width: 0%;
 	height: 3px;
-	transition: width 0.25s linear 0.5s;
+	transition: width 0.125s linear 0.25s;
 }
 .underline .left{
 	position: absolute;
@@ -858,7 +868,7 @@ input[type=text]:focus,input[type=password]:focus{
 	left:0%;
 	height: 0%;
 	width:3px;
-	transition: height 0.25s linear 0.75s;
+	transition: height 0.125s linear 0.375s;
 }
 .offers .button1:hover .underline .bottom,.offers .button1:hover .underline .top{
 	width: 100%;
@@ -879,4 +889,110 @@ input[type=text]:focus,input[type=password]:focus{
 .offers .button2:hover .underline .right{
 	top:0%;
 	height: 100%;
+}
+.down_button{
+	z-index: 135;
+	width: 10%;
+	font-size: 150%;
+	font-family: 'Roboto';
+	margin-left: 45%;
+	margin-top:10%;
+	text-align: center;
+	line-height: 1em;
+	padding: 1.2%;
+	padding-top: 4.4%;
+	cursor: pointer;
+	padding-bottom: 4.4%;
+	border-radius: 50%;
+	background-color:#484B5F;
+	color: #ffffff;
+}
+.down_button:hover{
+	padding: 1%;
+	padding-top: 4.2%;
+	margin-left: 45.2%;
+	margin-top: 10.2%;
+	font-size: 147%;
+	padding-bottom: 4.2%;
+}
+.itenary{
+	position: fixed;
+	display: none;
+	top: 0%;
+	left: 0%;
+	flex-direction: column;
+	z-index: 300;
+	color: #FFFFFF;
+	overflow-y: scroll;
+	background-color: #484B5F;
+	height: 100%;
+	width: 100vw;
+}
+.itenary .head{
+	width: 100vw;
+	height: auto;
+	font-size: 250%;
+	margin-top: 1%;
+	margin-bottom: 7%;
+	text-align:center;
+}
+.itenary .content{
+	background-color: rgba(256,256,256,0.8);
+	box-shadow: 1px 1px 10px #000000;
+	width: 80%;
+	padding: 4%;
+	margin-left: 5%;
+	height: auto;
+}
+.itenary .heading{
+font-size: 300%;
+color: #484B5F;
+}
+.gtc{
+	position: relative;
+	top: -10%;
+	left: 10%;
+	width: 80%;
+	display: flex;
+	height: 600px;
+	justify-content: space-between;
+}
+.jaipur{
+
+		width: 30%;
+		height: 105%;
+		margin-top: 5%;
+		background-color: #404459;
+		color: white;		
+}
+.delhi{
+		
+		width: 30%;
+		height: 105%;
+		margin-top: 5%;
+		background-color: #404459;
+		color: white;
+}
+.agra{
+
+		width: 30%;
+		height: 105%;
+		margin-top: 5%;
+		background-color: #404459;
+		color: white;
+}
+.division{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 5%;
+	height: 2px;
+	background-color: #ffffff;
+}
+.text{
+	margin: 5%;
+	font-family: 'Tangerine';
+	font-size: 170%;
+
+	line-height: 1.2em;
+	align-items: justify;
 }
